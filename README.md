@@ -1,2 +1,24 @@
 # pathhere
 pathhere
+
+=== The pathhere. script ===
+
+#!/bin/bash
+# Written by JK on 12th Jan 2021, for a Pi4
+# This script will permanently include the user's current directory (at the tim$
+# Step 1: Go to the folder where you want to store this script
+# Step 2: $ sudo nano ./pathhere
+# Step 3: Copy and Paste this entire file in. Then save it as pathhere and exit$
+# Step 4: $ sudo chmod a+xwr ./pathhere
+# Step 5: $ ./pathhere
+# Step 6: $ sudo reboot
+# Step 7: Run this script whereever you want added to the PATH list, then reboot
+
+
+echo "export PATH=\$PATH:$(pwd)" >> ~/.bashrc
+echo "The following directory has been added to PATH for all users:"
+pwd
+echo ""
+echo "You need to REBOOT in order to activate PATH for this new location."
+echo "At present, the list of PATH locations is as follows (this will update on$
+echo "${PATH//:/$'\n'}"
