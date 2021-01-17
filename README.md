@@ -1,8 +1,6 @@
 # pathhere
 pathhere
 
-=== The pathhere. script ===
-
 #!/bin/bash
 # Written by JK on 12th Jan 2021, for a Pi4
 # This script will permanently include the user's current directory (at the tim$
